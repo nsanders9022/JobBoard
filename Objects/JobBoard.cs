@@ -7,7 +7,7 @@ namespace Jobs.Objects
     private string _title;
     private string _description;
     private string _contactInfo;
-    private static List<Job> _instances = new List<Job>{};
+    private static List<Job> _jobList = new List<Job>{};
 
     public string GetTitle()
     {
@@ -37,5 +37,28 @@ namespace Jobs.Objects
     {
       _contactInfo = newContactInfo;
     }
+
+    public static List<Job> GetAll()
+    {
+      return _jobList;
+    }
+    public void Save()
+    {
+      _jobList.Add(this);
+    }
+    public static void ClearAll()
+    {
+      _jobList.Clear();
+    }
+
+    public Job(string jobTitle, string jobDescription, string jobContactInfo)
+    {
+      _title = jobTitle;
+      _description = jobDescription;
+      _contactInfo = jobContactInfo;
+    }
+
+
+
   }
 }
