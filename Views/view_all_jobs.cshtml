@@ -1,0 +1,11 @@
+  <h1>Job Board</h1>
+  <ul>
+    @foreach (var job in Model)
+    {
+      <li>@job.GetTitle(), @job.GetDescription(), @job.GetContactInfo()</li>
+    }
+  </ul>
+  <p><a href="/">Add another job posting</a></p>
+  <form action = "/jobs_cleared" method = "post">
+    <button type="submit" name="button">Clear all Jobs from board</button>
+  </form>
