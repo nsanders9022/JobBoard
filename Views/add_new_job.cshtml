@@ -1,16 +1,31 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
 <h1>Add a new job posting below:</h1>
 <form action="/jobs_added" method="post">
-  <label for="new-title">Add a job title</label>
-  <input type="text" name="new-title" id="new-title">
-  <label for="new-description">Add a job description</label>
-  <input type="text" name="new-description" id="new-description">
+  <div class="form-group">
+    <label for="new-title">Add a job title</label>
+    <input type="text" name="new-title" id="new-title" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="new-description">Add a job description</label>
+    <input type="text" name="new-description" id="new-description" class="form-control">
+  </div>
   <!-- <label for="new-contact-info">Add employer contact information</label>
   <input type="text" name="new-contact-info" id="new-contact-info"> -->
-  <label for="new-name">Add Contact name</label>
-  <input type="text" name="new-name" id="new-name">
-  <label for="new-email">Add contact email</label>
-  <input type="text" name="new-email" id="new-email">
-  <label for="new-phone-number">Add contact phone-number</label>
-  <input type="text" name="new-phone-number" id="new-phone-number">
-  <button type="submit">Add job</button>
+  <div class="form-group">
+    <label for="new-name">Add Contact name</label>
+    <input type="text" name="new-name" id="new-name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="new-email">Add contact email</label>
+    <input type="text" name="new-email" id="new-email" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="new-phone-number">Add contact phone-number</label>
+    <input type="text" name="new-phone-number" id="new-phone-number" class="form-control">
+  </div>
+
+  <button type="submit" class="btn">Add job</button>
 </form>
