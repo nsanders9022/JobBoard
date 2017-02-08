@@ -14,7 +14,8 @@ namespace JobBoards
         return View["view_all_jobs.cshtml", allJobs];
       };
       Post["/jobs_added"] = _ => {
-        Job newJob = new Job(Request.Form["new-title"], Request.Form["new-description"], Request.Form["new-contact-info"]);
+        Contact newContact = new Contact(Request.Form["new-name"], Request.Form["new-email"], Request.Form["new-phone-number"]);
+        Job newJob = new Job(Request.Form["new-title"], Request.Form["new-description"], newContact);
         newJob.Save();
         return View["jobs_added.cshtml", newJob];
       };

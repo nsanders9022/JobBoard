@@ -1,6 +1,8 @@
 <h1>You posted a new job!</h1>
 <p>@Model.GetTitle()</p>
 <p>@Model.GetDescription()</p>
-<p>@Model.GetContactInfo()</p>
+<p>@Model.GetContact().GetName()</p>
+<p>@Model.GetContact().GetEmail()</p>
+<p>@Model.GetContact().GetPhone()</p>
 <p><a href="/"> Post another job</a></p>
 <p><a href="/view_all_jobs">View entire job board</a></p>

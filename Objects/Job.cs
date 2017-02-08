@@ -6,8 +6,15 @@ namespace Jobs.Objects
   {
     private string _title;
     private string _description;
-    private string _contactInfo;
+    private Contact _contact;
     private static List<Job> _jobList = new List<Job>{};
+
+    public Job(string jobTitle, string jobDescription, Contact jobContact)
+    {
+      _title = jobTitle;
+      _description = jobDescription;
+      _contact = jobContact;
+    }
 
     public string GetTitle()
     {
@@ -29,13 +36,13 @@ namespace Jobs.Objects
       _description = newDescription;
     }
 
-    public string GetContactInfo()
+    public Contact GetContact()
     {
-      return _contactInfo;
+      return _contact;
     }
-    public void SetContactInfo(string newContactInfo)
+    public void SetContact(Contact newContact)
     {
-      _contactInfo = newContactInfo;
+      _contact = newContact;
     }
 
     public static List<Job> GetAll()
@@ -50,15 +57,5 @@ namespace Jobs.Objects
     {
       _jobList.Clear();
     }
-
-    public Job(string jobTitle, string jobDescription, string jobContactInfo)
-    {
-      _title = jobTitle;
-      _description = jobDescription;
-      _contactInfo = jobContactInfo;
-    }
-
-
-
   }
 }

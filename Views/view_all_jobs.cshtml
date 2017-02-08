@@ -2,7 +2,7 @@
   <ul>
     @foreach (var job in Model)
     {
-      <li>@job.GetTitle(), @job.GetDescription(), @job.GetContactInfo()</li>
+      <li>@job.GetTitle(), @job.GetDescription(), @job.GetContact().GetName(), @job.GetContact().GetEmail(), @job.GetContact().GetPhone()</li>
     }
   </ul>
   <p><a href="/">Add another job posting</a></p>
